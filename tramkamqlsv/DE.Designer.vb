@@ -52,22 +52,22 @@ Partial Class fmDe
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(49, 405)
+        Me.Label1.Location = New System.Drawing.Point(123, 405)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(120, 21)
+        Me.Label1.Size = New System.Drawing.Size(79, 21)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Department ID"
+        Me.Label1.Text = "Mã Khoa"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Location = New System.Drawing.Point(49, 467)
+        Me.Label2.Location = New System.Drawing.Point(123, 467)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 21)
+        Me.Label2.Size = New System.Drawing.Size(84, 21)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Department Name"
+        Me.Label2.Text = "Tên Khoa"
         '
         'TextBox1
         '
@@ -106,50 +106,54 @@ Partial Class fmDe
         '
         'btnThem
         '
-        Me.btnThem.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnThem.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnThem.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnThem.Location = New System.Drawing.Point(524, 391)
         Me.btnThem.Name = "btnThem"
         Me.btnThem.Size = New System.Drawing.Size(85, 38)
         Me.btnThem.TabIndex = 4
-        Me.btnThem.Text = "Insert"
+        Me.btnThem.Text = "Thêm"
         Me.btnThem.UseVisualStyleBackColor = False
         '
         'btnSuaDE
         '
-        Me.btnSuaDE.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnSuaDE.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnSuaDE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSuaDE.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSuaDE.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnSuaDE.Location = New System.Drawing.Point(625, 391)
         Me.btnSuaDE.Name = "btnSuaDE"
         Me.btnSuaDE.Size = New System.Drawing.Size(85, 38)
         Me.btnSuaDE.TabIndex = 5
-        Me.btnSuaDE.Text = "Update"
+        Me.btnSuaDE.Text = "Sửa"
         Me.btnSuaDE.UseVisualStyleBackColor = False
         '
         'btnXoaDE
         '
-        Me.btnXoaDE.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnXoaDE.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnXoaDE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnXoaDE.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnXoaDE.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnXoaDE.Location = New System.Drawing.Point(524, 453)
         Me.btnXoaDE.Name = "btnXoaDE"
         Me.btnXoaDE.Size = New System.Drawing.Size(85, 38)
         Me.btnXoaDE.TabIndex = 6
-        Me.btnXoaDE.Text = "Delete"
+        Me.btnXoaDE.Text = "Xóa"
         Me.btnXoaDE.UseVisualStyleBackColor = False
         '
         'btnInDe
         '
-        Me.btnInDe.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnInDe.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnInDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInDe.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInDe.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnInDe.Location = New System.Drawing.Point(625, 453)
         Me.btnInDe.Name = "btnInDe"
         Me.btnInDe.Size = New System.Drawing.Size(85, 38)
         Me.btnInDe.TabIndex = 7
-        Me.btnInDe.Text = "Print"
+        Me.btnInDe.Text = "In"
         Me.btnInDe.UseVisualStyleBackColor = False
         '
         'DataSet1BindingSource
@@ -198,14 +202,14 @@ Partial Class fmDe
         'IDDeDataGridViewTextBoxColumn
         '
         Me.IDDeDataGridViewTextBoxColumn.DataPropertyName = "ID_De"
-        Me.IDDeDataGridViewTextBoxColumn.HeaderText = "Department ID"
+        Me.IDDeDataGridViewTextBoxColumn.HeaderText = "Mã Khoa"
         Me.IDDeDataGridViewTextBoxColumn.Name = "IDDeDataGridViewTextBoxColumn"
         Me.IDDeDataGridViewTextBoxColumn.Width = 300
         '
         'NameDeDataGridViewTextBoxColumn
         '
         Me.NameDeDataGridViewTextBoxColumn.DataPropertyName = "Name_De"
-        Me.NameDeDataGridViewTextBoxColumn.HeaderText = "Department Name"
+        Me.NameDeDataGridViewTextBoxColumn.HeaderText = "Tên Khoa"
         Me.NameDeDataGridViewTextBoxColumn.Name = "NameDeDataGridViewTextBoxColumn"
         Me.NameDeDataGridViewTextBoxColumn.Width = 420
         '
@@ -213,7 +217,7 @@ Partial Class fmDe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(833, 556)
         Me.Controls.Add(Me.btnInDe)
         Me.Controls.Add(Me.btnXoaDE)

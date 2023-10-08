@@ -57,11 +57,11 @@ Partial Class frmGPA
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(74, 367)
+        Me.Label1.Location = New System.Drawing.Point(76, 370)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 19)
+        Me.Label1.Size = New System.Drawing.Size(91, 19)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Student ID"
+        Me.Label1.Text = "Mã Sinh Viên"
         '
         'DataGridView1
         '
@@ -84,31 +84,31 @@ Partial Class frmGPA
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(74, 411)
+        Me.Label2.Location = New System.Drawing.Point(74, 417)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 19)
+        Me.Label2.Size = New System.Drawing.Size(93, 19)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Subject ID"
+        Me.Label2.Text = "Mã Môn Học"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(74, 455)
+        Me.Label3.Location = New System.Drawing.Point(102, 465)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 19)
+        Me.Label3.Size = New System.Drawing.Size(65, 19)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Exam Times"
+        Me.Label3.Text = "Số lần thi"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(74, 502)
+        Me.Label4.Location = New System.Drawing.Point(126, 506)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 19)
+        Me.Label4.Size = New System.Drawing.Size(41, 19)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "GPA"
+        Me.Label4.Text = "Điểm"
         '
         'txtSuID
         '
@@ -148,50 +148,54 @@ Partial Class frmGPA
         '
         'BtnThemGPA
         '
-        Me.BtnThemGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.BtnThemGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.BtnThemGPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnThemGPA.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnThemGPA.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnThemGPA.Location = New System.Drawing.Point(588, 403)
         Me.BtnThemGPA.Name = "BtnThemGPA"
         Me.BtnThemGPA.Size = New System.Drawing.Size(85, 39)
         Me.BtnThemGPA.TabIndex = 6
-        Me.BtnThemGPA.Text = "Insert"
+        Me.BtnThemGPA.Text = "Thêm"
         Me.BtnThemGPA.UseVisualStyleBackColor = False
         '
         'BtnSuaGPA
         '
-        Me.BtnSuaGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.BtnSuaGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.BtnSuaGPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSuaGPA.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSuaGPA.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnSuaGPA.Location = New System.Drawing.Point(684, 403)
         Me.BtnSuaGPA.Name = "BtnSuaGPA"
         Me.BtnSuaGPA.Size = New System.Drawing.Size(85, 39)
         Me.BtnSuaGPA.TabIndex = 7
-        Me.BtnSuaGPA.Text = "Update"
+        Me.BtnSuaGPA.Text = "Sửa"
         Me.BtnSuaGPA.UseVisualStyleBackColor = False
         '
         'BtnXoaGPA
         '
-        Me.BtnXoaGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.BtnXoaGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.BtnXoaGPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnXoaGPA.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnXoaGPA.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnXoaGPA.Location = New System.Drawing.Point(588, 455)
         Me.BtnXoaGPA.Name = "BtnXoaGPA"
         Me.BtnXoaGPA.Size = New System.Drawing.Size(85, 39)
         Me.BtnXoaGPA.TabIndex = 8
-        Me.BtnXoaGPA.Text = "Delete"
+        Me.BtnXoaGPA.Text = "Xóa"
         Me.BtnXoaGPA.UseVisualStyleBackColor = False
         '
         'btnInGPA
         '
-        Me.btnInGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnInGPA.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnInGPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInGPA.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInGPA.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnInGPA.Location = New System.Drawing.Point(684, 455)
         Me.btnInGPA.Name = "btnInGPA"
         Me.btnInGPA.Size = New System.Drawing.Size(85, 39)
         Me.btnInGPA.TabIndex = 9
-        Me.btnInGPA.Text = "Print"
+        Me.btnInGPA.Text = "In"
         Me.btnInGPA.UseVisualStyleBackColor = False
         '
         'DataSet1BindingSource
@@ -241,28 +245,28 @@ Partial Class frmGPA
         'IDStDataGridViewTextBoxColumn
         '
         Me.IDStDataGridViewTextBoxColumn.DataPropertyName = "ID_St"
-        Me.IDStDataGridViewTextBoxColumn.HeaderText = "Student ID"
+        Me.IDStDataGridViewTextBoxColumn.HeaderText = "Mã Sinh Viên"
         Me.IDStDataGridViewTextBoxColumn.Name = "IDStDataGridViewTextBoxColumn"
         Me.IDStDataGridViewTextBoxColumn.Width = 200
         '
         'IDSuDataGridViewTextBoxColumn
         '
         Me.IDSuDataGridViewTextBoxColumn.DataPropertyName = "ID_Su"
-        Me.IDSuDataGridViewTextBoxColumn.HeaderText = "Subject ID"
+        Me.IDSuDataGridViewTextBoxColumn.HeaderText = "Mã Môn"
         Me.IDSuDataGridViewTextBoxColumn.Name = "IDSuDataGridViewTextBoxColumn"
         Me.IDSuDataGridViewTextBoxColumn.Width = 200
         '
         'LanthiDataGridViewTextBoxColumn
         '
         Me.LanthiDataGridViewTextBoxColumn.DataPropertyName = "Lanthi"
-        Me.LanthiDataGridViewTextBoxColumn.HeaderText = "Exam Times"
+        Me.LanthiDataGridViewTextBoxColumn.HeaderText = "Số Lần Thi"
         Me.LanthiDataGridViewTextBoxColumn.Name = "LanthiDataGridViewTextBoxColumn"
         Me.LanthiDataGridViewTextBoxColumn.Width = 140
         '
         'GPADataGridViewTextBoxColumn
         '
         Me.GPADataGridViewTextBoxColumn.DataPropertyName = "GPA"
-        Me.GPADataGridViewTextBoxColumn.HeaderText = "GPA"
+        Me.GPADataGridViewTextBoxColumn.HeaderText = "Điểm"
         Me.GPADataGridViewTextBoxColumn.Name = "GPADataGridViewTextBoxColumn"
         Me.GPADataGridViewTextBoxColumn.Width = 200
         '
@@ -270,7 +274,7 @@ Partial Class frmGPA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(833, 556)
         Me.Controls.Add(Me.btnInGPA)
         Me.Controls.Add(Me.BtnXoaGPA)

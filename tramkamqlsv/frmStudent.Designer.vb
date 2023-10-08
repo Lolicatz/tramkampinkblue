@@ -25,6 +25,7 @@ Partial Class frmStudent
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStudent))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataSet1 = New tramkamqlsv.DataSet1()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -43,12 +44,11 @@ Partial Class frmStudent
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.OleDbSelectCommand1 = New System.Data.OleDb.OleDbCommand()
+        Me.OleDbConnection1 = New System.Data.OleDb.OleDbConnection()
         Me.OleDbInsertCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.OleDbUpdateCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.OleDbDeleteCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.OleDbDataAdapter1 = New System.Data.OleDb.OleDbDataAdapter()
-        Me.OleDbConnection1 = New System.Data.OleDb.OleDbConnection()
-        Me.DataSet1 = New tramkamqlsv.DataSet1()
         Me.IDStDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameStDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateStDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,11 +64,12 @@ Partial Class frmStudent
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(42, 356)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.Location = New System.Drawing.Point(19, 356)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(25, 19)
+        Me.Label1.Size = New System.Drawing.Size(85, 19)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID"
+        Me.Label1.Text = "Mã sinh viên"
         '
         'DataGridView1
         '
@@ -82,65 +83,76 @@ Partial Class frmStudent
         Me.DataGridView1.Size = New System.Drawing.Size(785, 313)
         Me.DataGridView1.TabIndex = 1
         '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(42, 397)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Location = New System.Drawing.Point(31, 401)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 19)
+        Me.Label2.Size = New System.Drawing.Size(73, 19)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Name"
+        Me.Label2.Text = "Họ và Tên"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(42, 445)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(35, 449)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 19)
+        Me.Label3.Size = New System.Drawing.Size(69, 19)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Date"
+        Me.Label3.Text = "Ngày sinh"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(42, 493)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Location = New System.Drawing.Point(45, 493)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(32, 19)
+        Me.Label4.Size = New System.Drawing.Size(59, 19)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Sex"
+        Me.Label4.Text = "Giới tính"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(364, 356)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label5.Location = New System.Drawing.Point(338, 378)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 19)
+        Me.Label5.Size = New System.Drawing.Size(51, 19)
         Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Address"
+        Me.Label5.Text = "Địa chỉ"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(364, 397)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label6.Location = New System.Drawing.Point(338, 419)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 19)
+        Me.Label6.Size = New System.Drawing.Size(34, 19)
         Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Class"
+        Me.Label6.Text = "Lớp"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(364, 445)
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label7.Location = New System.Drawing.Point(338, 467)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 19)
+        Me.Label7.Size = New System.Drawing.Size(43, 19)
         Me.Label7.TabIndex = 7
-        Me.Label7.Text = "Department"
+        Me.Label7.Text = "Khoa"
         '
         'txtStu
         '
@@ -182,7 +194,7 @@ Partial Class frmStudent
         '
         Me.txtBor.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet1, "information.Bor_St", True))
         Me.txtBor.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBor.Location = New System.Drawing.Point(447, 353)
+        Me.txtBor.Location = New System.Drawing.Point(421, 375)
         Me.txtBor.Name = "txtBor"
         Me.txtBor.Size = New System.Drawing.Size(212, 26)
         Me.txtBor.TabIndex = 8
@@ -191,7 +203,7 @@ Partial Class frmStudent
         '
         Me.txtCl.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet1, "information.ID_Cl", True))
         Me.txtCl.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCl.Location = New System.Drawing.Point(447, 398)
+        Me.txtCl.Location = New System.Drawing.Point(421, 420)
         Me.txtCl.Name = "txtCl"
         Me.txtCl.Size = New System.Drawing.Size(212, 26)
         Me.txtCl.TabIndex = 8
@@ -200,63 +212,72 @@ Partial Class frmStudent
         '
         Me.txtDe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet1, "information.ID_De", True))
         Me.txtDe.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDe.Location = New System.Drawing.Point(447, 442)
+        Me.txtDe.Location = New System.Drawing.Point(421, 464)
         Me.txtDe.Name = "txtDe"
         Me.txtDe.Size = New System.Drawing.Size(212, 26)
         Me.txtDe.TabIndex = 8
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(675, 461)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(662, 403)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(70, 33)
         Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Insert"
+        Me.Button1.Text = "Thêm"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(751, 461)
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.Location = New System.Drawing.Point(738, 403)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(70, 33)
         Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Update"
+        Me.Button2.Text = "Sửa"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(675, 500)
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.Location = New System.Drawing.Point(662, 442)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(70, 33)
         Me.Button3.TabIndex = 9
-        Me.Button3.Text = "Delete"
+        Me.Button3.Text = "Xóa"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(751, 500)
+        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button4.Location = New System.Drawing.Point(738, 442)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(70, 33)
         Me.Button4.TabIndex = 9
-        Me.Button4.Text = "Print"
+        Me.Button4.Text = "In"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'OleDbSelectCommand1
         '
         Me.OleDbSelectCommand1.CommandText = "SELECT        information.*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            information"
         Me.OleDbSelectCommand1.Connection = Me.OleDbConnection1
+        '
+        'OleDbConnection1
+        '
+        Me.OleDbConnection1.ConnectionString = "Provider=SQLOLEDB.1;Data Source=NEXUSLITE-PC;Integrated Security=SSPI;Initial Cat" &
+    "alog=lt"
         '
         'OleDbInsertCommand1
         '
@@ -285,68 +306,58 @@ Partial Class frmStudent
         Me.OleDbDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "information", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ID_St", "ID_St"), New System.Data.Common.DataColumnMapping("Name_St", "Name_St"), New System.Data.Common.DataColumnMapping("Date_St", "Date_St"), New System.Data.Common.DataColumnMapping("Sex_St", "Sex_St"), New System.Data.Common.DataColumnMapping("Bor_St", "Bor_St"), New System.Data.Common.DataColumnMapping("ID_Cl", "ID_Cl"), New System.Data.Common.DataColumnMapping("ID_De", "ID_De")})})
         Me.OleDbDataAdapter1.UpdateCommand = Me.OleDbUpdateCommand1
         '
-        'OleDbConnection1
-        '
-        Me.OleDbConnection1.ConnectionString = "Provider=SQLOLEDB.1;Data Source=NEXUSLITE-PC;Integrated Security=SSPI;Initial Cat" &
-    "alog=lt"
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'IDStDataGridViewTextBoxColumn
         '
         Me.IDStDataGridViewTextBoxColumn.DataPropertyName = "ID_St"
-        Me.IDStDataGridViewTextBoxColumn.HeaderText = "Student ID"
+        Me.IDStDataGridViewTextBoxColumn.HeaderText = "Mã sinh viên"
         Me.IDStDataGridViewTextBoxColumn.Name = "IDStDataGridViewTextBoxColumn"
         Me.IDStDataGridViewTextBoxColumn.Width = 150
         '
         'NameStDataGridViewTextBoxColumn
         '
         Me.NameStDataGridViewTextBoxColumn.DataPropertyName = "Name_St"
-        Me.NameStDataGridViewTextBoxColumn.HeaderText = "Student Name"
+        Me.NameStDataGridViewTextBoxColumn.HeaderText = "Họ và Tên"
         Me.NameStDataGridViewTextBoxColumn.Name = "NameStDataGridViewTextBoxColumn"
         Me.NameStDataGridViewTextBoxColumn.Width = 200
         '
         'DateStDataGridViewTextBoxColumn
         '
         Me.DateStDataGridViewTextBoxColumn.DataPropertyName = "Date_St"
-        Me.DateStDataGridViewTextBoxColumn.HeaderText = "Date"
+        Me.DateStDataGridViewTextBoxColumn.HeaderText = "Ngày Sinh"
         Me.DateStDataGridViewTextBoxColumn.Name = "DateStDataGridViewTextBoxColumn"
         Me.DateStDataGridViewTextBoxColumn.Width = 150
         '
         'SexStDataGridViewTextBoxColumn
         '
         Me.SexStDataGridViewTextBoxColumn.DataPropertyName = "Sex_St"
-        Me.SexStDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexStDataGridViewTextBoxColumn.HeaderText = "Giới tính"
         Me.SexStDataGridViewTextBoxColumn.Name = "SexStDataGridViewTextBoxColumn"
         Me.SexStDataGridViewTextBoxColumn.Width = 70
         '
         'BorStDataGridViewTextBoxColumn
         '
         Me.BorStDataGridViewTextBoxColumn.DataPropertyName = "Bor_St"
-        Me.BorStDataGridViewTextBoxColumn.HeaderText = "Address"
+        Me.BorStDataGridViewTextBoxColumn.HeaderText = "Địa chỉ"
         Me.BorStDataGridViewTextBoxColumn.Name = "BorStDataGridViewTextBoxColumn"
         Me.BorStDataGridViewTextBoxColumn.Width = 150
         '
         'IDClDataGridViewTextBoxColumn
         '
         Me.IDClDataGridViewTextBoxColumn.DataPropertyName = "ID_Cl"
-        Me.IDClDataGridViewTextBoxColumn.HeaderText = "Class"
+        Me.IDClDataGridViewTextBoxColumn.HeaderText = "Lớp"
         Me.IDClDataGridViewTextBoxColumn.Name = "IDClDataGridViewTextBoxColumn"
         '
         'IDDeDataGridViewTextBoxColumn
         '
         Me.IDDeDataGridViewTextBoxColumn.DataPropertyName = "ID_De"
-        Me.IDDeDataGridViewTextBoxColumn.HeaderText = "Department"
+        Me.IDDeDataGridViewTextBoxColumn.HeaderText = "Khoa"
         Me.IDDeDataGridViewTextBoxColumn.Name = "IDDeDataGridViewTextBoxColumn"
         '
         'frmStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(833, 556)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -367,6 +378,7 @@ Partial Class frmStudent
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
+        Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Name = "frmStudent"
         Me.Text = "frmStudent"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

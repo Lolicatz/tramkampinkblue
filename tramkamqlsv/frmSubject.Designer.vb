@@ -27,6 +27,7 @@ Partial Class frmSubject
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataSet1 = New tramkamqlsv.DataSet1()
         Me.txtidsu = New System.Windows.Forms.TextBox()
         Me.txtnamesu = New System.Windows.Forms.TextBox()
         Me.txtde = New System.Windows.Forms.TextBox()
@@ -34,14 +35,13 @@ Partial Class frmSubject
         Me.btnSuaSu = New System.Windows.Forms.Button()
         Me.btnXoaSu = New System.Windows.Forms.Button()
         Me.btnInSU = New System.Windows.Forms.Button()
-        Me.DataSet1 = New tramkamqlsv.DataSet1()
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OleDbSelectCommand1 = New System.Data.OleDb.OleDbCommand()
+        Me.OleDbConnection1 = New System.Data.OleDb.OleDbConnection()
         Me.OleDbInsertCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.OleDbUpdateCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.OleDbDeleteCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.OleDbDataAdapter1 = New System.Data.OleDb.OleDbDataAdapter()
-        Me.OleDbConnection1 = New System.Data.OleDb.OleDbConnection()
         Me.IDSuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameSuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IDDeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,9 +56,9 @@ Partial Class frmSubject
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(48, 356)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 21)
+        Me.Label1.Size = New System.Drawing.Size(111, 21)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Subject ID"
+        Me.Label1.Text = "Mã Môn Học"
         '
         'Label2
         '
@@ -66,9 +66,9 @@ Partial Class frmSubject
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(48, 417)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 21)
+        Me.Label2.Size = New System.Drawing.Size(116, 21)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Subject Name"
+        Me.Label2.Text = "Tên Môn Học"
         '
         'Label3
         '
@@ -76,9 +76,9 @@ Partial Class frmSubject
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(48, 480)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(120, 21)
+        Me.Label3.Size = New System.Drawing.Size(79, 21)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Department ID"
+        Me.Label3.Text = "Mã Khoa"
         '
         'DataGridView1
         '
@@ -91,6 +91,11 @@ Partial Class frmSubject
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(747, 297)
         Me.DataGridView1.TabIndex = 3
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtidsu
         '
@@ -121,56 +126,55 @@ Partial Class frmSubject
         '
         'btnThemSU
         '
-        Me.btnThemSU.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnThemSU.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnThemSU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnThemSU.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemSU.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnThemSU.Location = New System.Drawing.Point(590, 375)
         Me.btnThemSU.Name = "btnThemSU"
         Me.btnThemSU.Size = New System.Drawing.Size(87, 40)
         Me.btnThemSU.TabIndex = 5
-        Me.btnThemSU.Text = "Insert"
+        Me.btnThemSU.Text = "Thêm"
         Me.btnThemSU.UseVisualStyleBackColor = False
         '
         'btnSuaSu
         '
-        Me.btnSuaSu.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnSuaSu.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnSuaSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSuaSu.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSuaSu.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnSuaSu.Location = New System.Drawing.Point(692, 375)
         Me.btnSuaSu.Name = "btnSuaSu"
         Me.btnSuaSu.Size = New System.Drawing.Size(87, 40)
         Me.btnSuaSu.TabIndex = 5
-        Me.btnSuaSu.Text = "Update"
+        Me.btnSuaSu.Text = "Sửa"
         Me.btnSuaSu.UseVisualStyleBackColor = False
         '
         'btnXoaSu
         '
-        Me.btnXoaSu.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnXoaSu.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnXoaSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnXoaSu.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnXoaSu.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnXoaSu.Location = New System.Drawing.Point(590, 435)
         Me.btnXoaSu.Name = "btnXoaSu"
         Me.btnXoaSu.Size = New System.Drawing.Size(87, 40)
         Me.btnXoaSu.TabIndex = 5
-        Me.btnXoaSu.Text = "Delete"
+        Me.btnXoaSu.Text = "Xóa"
         Me.btnXoaSu.UseVisualStyleBackColor = False
         '
         'btnInSU
         '
-        Me.btnInSU.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(187, Byte), Integer))
+        Me.btnInSU.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.btnInSU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInSU.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInSU.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnInSU.Location = New System.Drawing.Point(692, 435)
         Me.btnInSU.Name = "btnInSU"
         Me.btnInSU.Size = New System.Drawing.Size(87, 40)
         Me.btnInSU.TabIndex = 5
-        Me.btnInSU.Text = "Print"
+        Me.btnInSU.Text = "In"
         Me.btnInSU.UseVisualStyleBackColor = False
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataSet1BindingSource
         '
@@ -181,6 +185,11 @@ Partial Class frmSubject
         '
         Me.OleDbSelectCommand1.CommandText = "SELECT        subjectHP.*" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            subjectHP"
         Me.OleDbSelectCommand1.Connection = Me.OleDbConnection1
+        '
+        'OleDbConnection1
+        '
+        Me.OleDbConnection1.ConnectionString = "Provider=SQLOLEDB.1;Data Source=NEXUSLITE-PC;Integrated Security=SSPI;Initial Cat" &
+    "alog=lt"
         '
         'OleDbInsertCommand1
         '
@@ -210,29 +219,24 @@ Partial Class frmSubject
         Me.OleDbDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "subjectHP", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ID_Su", "ID_Su"), New System.Data.Common.DataColumnMapping("Name_Su", "Name_Su"), New System.Data.Common.DataColumnMapping("ID_De", "ID_De")})})
         Me.OleDbDataAdapter1.UpdateCommand = Me.OleDbUpdateCommand1
         '
-        'OleDbConnection1
-        '
-        Me.OleDbConnection1.ConnectionString = "Provider=SQLOLEDB.1;Data Source=NEXUSLITE-PC;Integrated Security=SSPI;Initial Cat" &
-    "alog=lt"
-        '
         'IDSuDataGridViewTextBoxColumn
         '
         Me.IDSuDataGridViewTextBoxColumn.DataPropertyName = "ID_Su"
-        Me.IDSuDataGridViewTextBoxColumn.HeaderText = "Subject ID"
+        Me.IDSuDataGridViewTextBoxColumn.HeaderText = "Mã Môn Hoc"
         Me.IDSuDataGridViewTextBoxColumn.Name = "IDSuDataGridViewTextBoxColumn"
         Me.IDSuDataGridViewTextBoxColumn.Width = 200
         '
         'NameSuDataGridViewTextBoxColumn
         '
         Me.NameSuDataGridViewTextBoxColumn.DataPropertyName = "Name_Su"
-        Me.NameSuDataGridViewTextBoxColumn.HeaderText = "Subject Name"
+        Me.NameSuDataGridViewTextBoxColumn.HeaderText = "Tên Môn Học"
         Me.NameSuDataGridViewTextBoxColumn.Name = "NameSuDataGridViewTextBoxColumn"
         Me.NameSuDataGridViewTextBoxColumn.Width = 300
         '
         'IDDeDataGridViewTextBoxColumn
         '
         Me.IDDeDataGridViewTextBoxColumn.DataPropertyName = "ID_De"
-        Me.IDDeDataGridViewTextBoxColumn.HeaderText = "Department ID"
+        Me.IDDeDataGridViewTextBoxColumn.HeaderText = "Mã Khoa"
         Me.IDDeDataGridViewTextBoxColumn.Name = "IDDeDataGridViewTextBoxColumn"
         Me.IDDeDataGridViewTextBoxColumn.Width = 200
         '
@@ -240,7 +244,7 @@ Partial Class frmSubject
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(833, 556)
         Me.Controls.Add(Me.btnInSU)
         Me.Controls.Add(Me.btnXoaSu)
