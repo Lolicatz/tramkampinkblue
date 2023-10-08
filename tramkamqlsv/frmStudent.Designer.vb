@@ -126,7 +126,7 @@ Partial Class frmStudent
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Location = New System.Drawing.Point(338, 378)
+        Me.Label5.Location = New System.Drawing.Point(355, 382)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(51, 19)
         Me.Label5.TabIndex = 5
@@ -137,7 +137,7 @@ Partial Class frmStudent
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(338, 419)
+        Me.Label6.Location = New System.Drawing.Point(372, 427)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(34, 19)
         Me.Label6.TabIndex = 6
@@ -148,7 +148,7 @@ Partial Class frmStudent
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(338, 467)
+        Me.Label7.Location = New System.Drawing.Point(363, 471)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(43, 19)
         Me.Label7.TabIndex = 7
